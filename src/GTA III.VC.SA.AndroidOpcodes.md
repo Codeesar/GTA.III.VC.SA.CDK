@@ -1,3 +1,17 @@
+# GTA.III.VC.SA.AndroidOpcodes
+
+## 0DD6
+    SCM.INI: 0DD6=1,%1d% = get_game_version ; android
+    Opcodes:
+    CommandName:
+    描述: 获取游戏的版本号。
+* Game: Android GTAIII.GTAVC.GTASA
+* Library: libCLEO.SO
+* Author作者: 
+* Parameters参数: 1
+* Type类型: Get
+
+
 0DD0=2,%1d% = get_label_addr %2p% ; android 
 0DD1=2,%1d% = get_func_addr_by_cstr_name %2d% ; android 
 0DD2=1,context_call_func %1d% ; android 
