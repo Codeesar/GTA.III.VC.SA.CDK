@@ -8,14 +8,13 @@
 * Game: Android GTAIII.GTAVC.GTASA  
 * Library: libCLEO.SO  
 * Author: AlexanderBlade  
-* Parameters: 1  Returned Integer(INT)  
-_
+* Parameters: 1  Returned Integer(INT)
     0DD6: 0@ = get_game_version
     if  
     0@ == 13//ID GTASA1.08  
     then
     
-* 示例:
+* Data:
 
 |GAME|GTAIII|GTAVC|GTASA|  
 |:--------:|:--------:|:--------:|:--------:|  
