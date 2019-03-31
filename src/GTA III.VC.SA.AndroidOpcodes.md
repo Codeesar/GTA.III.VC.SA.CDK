@@ -1,15 +1,15 @@
 # GTA.III.VC.SA.AndroidOpcodes
 
 ## 0DD6
-    SCM: 0DD6=1,%1d% = get_game_version ; android
-    Opcodes: 0DD6: 0@ = get_game_version
-    CommandName:
-    描述: 获取游戏的版本号。
-* Game: Android GTAIII.GTAVC.GTASA
-* Library: libCLEO.SO
-* Author: AlexanderBlade
-* Parameters: 1  Returned Integer(INT)
-    Example:  
+    SCM: 0DD6=1,%1d% = get_game_version ; android  
+    Opcodes: 0DD6: 0@ = get_game_version  
+    CommandName:  
+    描述: 获取游戏的版本号。  
+* Game: Android GTAIII.GTAVC.GTASA  
+* Library: libCLEO.SO  
+* Author: AlexanderBlade  
+* Parameters: 1  Returned Integer(INT)  
+* Example:  
     0DD6: 0@ = get_game_version
     if
      0@ == 13//ID GTASA1.08
