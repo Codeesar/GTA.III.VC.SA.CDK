@@ -9,13 +9,14 @@
 * Library: libCLEO.SO  
 * Author: AlexanderBlade  
 * Parameters: 1  Returned Integer(INT)
-    0DD6: 0@ = get_game_version
-    if  
-    0@ == 13//ID GTASA1.08  
-    then
-    
+* 示例:
+```
+0DD6: 0@ = get_game_version
+if  
+ 0@ == 13//ID GTASA1.08  
+then
+```
 * Data:
-
 |GAME|GTAIII|GTAVC|GTASA|  
 |:--------:|:--------:|:--------:|:--------:|  
 |1.00|x|x|3|  
