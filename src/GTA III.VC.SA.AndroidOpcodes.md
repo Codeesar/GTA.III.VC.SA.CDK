@@ -9,7 +9,6 @@
 * Library: libCLEO.SO  
 * Author: AlexanderBlade  
 * Parameters: 1  Returned Integer(INT)  
-
     0DD6: 0@ = get_game_version  
     if  
     0@ == 13//ID GTASA1.08  
