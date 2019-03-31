@@ -12,9 +12,9 @@
 * Example:  
     0DD6: 0@ = get_game_version
     if
-     0@ == 13//ID GTASA1.08
+    0@ == 13//ID GTASA1.08
     then
-* Data:
+* Data:  
 |GAME|GTAIII|GTAVC|GTASA|
 |:--------:|:--------:|:--------:|:--------:|
 |1.00|x|x|3|
