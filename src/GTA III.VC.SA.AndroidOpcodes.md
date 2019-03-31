@@ -5,6 +5,7 @@
     Opcodes: 0DD6: 0@ = get_game_version  
     CommandName:  
     描述: 获取游戏的版本号。
+    Description: Get the version ID of the game.
 * Game: Android GTAIII.GTAVC.GTASA  
 * Library: libCLEO.SO  
 * Author: AlexanderBlade  
