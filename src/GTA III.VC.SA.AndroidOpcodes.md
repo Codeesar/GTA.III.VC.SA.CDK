@@ -1,29 +1,32 @@
 # GTA.III.VC.SA.AndroidOpcodes
 
 ## 0DD6
-    SCM.INI: 0DD6=1,%1d% = get_game_version ; android
-    Opcodes:
-    CommandName:
+    SCM: 0DD6=1,%1d% = get_game_version ; android  
+    Opcodes: 0DD6: 0@ = get_game_version  
+    CommandName:  
     描述: 获取游戏的版本号。
-* Game: Android GTAIII.GTAVC.GTASA
-* Library: libCLEO.SO
-* Author作者: 
-* Parameters参数: 1
-* Type类型: Get
+    Description: Get the version ID of the game.
+* Game: Android GTAIII.GTAVC.GTASA  
+* Library: libCLEO.SO  
+* Author: AlexanderBlade  
+* Parameters: 1  Returned Integer(INT)
+* Example:
+```
+0DD6: 0@ = get_game_version
+if  
+ 0@ == 13//ID GTASA1.08  
+then
+```
+* Data:
 
-
-0DD0=2,%1d% = get_label_addr %2p% ; android 
-0DD1=2,%1d% = get_func_addr_by_cstr_name %2d% ; android 
-0DD2=1,context_call_func %1d% ; android 
-0DD3=2,context_set_reg %1d% value %2d% ; android 
-0DD4=2,%1d% = context_get_reg %2d% ; android 
-0DD6=1,%1d% = get_game_version ; android 
-0DD7=1,%1d% = get_image_base ; android 
-0DD8=4,%1d% = read_mem_addr %2d% size %3d% add_ib %4d% ; android 
-0DD9=5,write_mem_addr %1d% value %2d% size %3d% add_ib %4d% protect %5d% ; android 
-0DDC=2,set_mutex_var %1d% to %2d% ; android 
-0DDD=2,%1d% = get_mutex_var %2d% ; android 
-0DE0=3,%1d% = get_touch_point_state %2d% mintime %3d% ; android 
-0DE1=5,%1d% = get_touch_slide_state from %2d% to %3d% mintime %4d% maxtime %5d% ; android 
-0DE2=1,%1d% = get_menu_button_state ; read opcode info before using ; android 
-0DE3=2,%1d% = get_menu_button_pressed mintime %2d% ; read opcode info before using ; android
+|GAME|GTAIII|GTAVC|GTASA|  
+|:--------:|:--------:|:--------:|:--------:|  
+|1.00|x|x|3|  
+|1.02|x|x|5|  
+|1.03|x|2|6|  
+|1.4|1|x|x|  
+|1.05|x|x|7|  
+|1.6|11|x|x|  
+|1.06|x|x|8|  
+|1.07|x|12|9|  
+|1.08|x|x|13|
