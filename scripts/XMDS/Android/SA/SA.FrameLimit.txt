@@ -8,20 +8,21 @@ const
  FrameLimit30 = 0x1E
  FrameLimit48 = 0x30
  FrameLimit60 = 0x3C
- GTASAv1_08 = 13
- RsGlobal = 0x005D1020
 end
 
 0DD6: 0@ = get_game_version
 if
-  0@ <> GTASAv1_08
-jf @FrameLimit
+  0@ <> 13
+jf @FrameLimit1_08
+if
+  0@ <> 17
+jf @FrameLimit2_00  
 end_thread
 
-:FrameLimit
+:FrameLimit1_08
 //Maximum number of frames:
 0DD9: write_mem_addr 0x00463FE8 value FrameLimit60 size 1 add_ib 1 protect 1
-0DD8: 0@ = read_mem_addr RsGlobal size 4 add_ib 1
+0DD8: 0@ = read_mem_addr 0x005D1020 size 4 add_ib 1
 0@ += 0xC //0x0095B074
 0DD9: write_mem_addr 0@ value FrameLimit60 size 1 add_ib 0 protect 1
 0DD9: write_mem_addr 0x0095B074 value FrameLimit60 size 1 add_ib 1 protect 1
@@ -29,5 +30,19 @@ end_thread
 0DD9: write_mem_addr 0x0056C1F6 value FrameLimit60 size 1 add_ib 1 protect 1
 
 0DD9: write_mem_addr 0x0056C1A2 value FrameLimit30 size 1 add_ib 1 protect 1 //Frame limit
+end_thread
 
+:FrameLimit2_00
+//Maximum number of frames:
+0DD9: write_mem_addr 0x004D4508 value FrameLimit60 size 1 add_ib 1 protect 1
+0DD8: 0@ = read_mem_addr 0x0067910C size 4 add_ib 1
+0@ += 0xC //0x009FC908
+0DD9: write_mem_addr 0@ value FrameLimit60 size 1 add_ib 0 protect 1
+0DD9: write_mem_addr 0x009FC908 value FrameLimit60 size 1 add_ib 1 protect 1
+0DD9: write_mem_addr 0x005E48DE value FrameLimit60 size 1 add_ib 1 protect 1
+0DD9: write_mem_addr 0x005E4932 value FrameLimit60 size 1 add_ib 1 protect 1
+0DD9: write_mem_addr 0x005E4978 value FrameLimit60 size 1 add_ib 1 protect 1
+0DD9: write_mem_addr 0x005E4990 value FrameLimit60 size 1 add_ib 1 protect 1
+
+0DD9: write_mem_addr 0x005E4996 value FrameLimit30 size 1 add_ib 1 protect 1 //Frame limit
 end_thread
