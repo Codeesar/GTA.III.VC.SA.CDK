@@ -1,6 +1,6 @@
 # GTA.III.VC.SA.CDK
 一个辅助GTA游戏III.VC.SA的CLEO开发工具包//An auxiliary GTA game III.VC.SA for CDK(CLEO Development Kit)  
-[CLEO Library](http://cleo.li/) | [CLEO Android](http://cleo.li/android.html)  
+[CLEO Library](http://cleo.li/) | [CLEO Android](https://gtaforums.com/topic/663125-android-cleo-android/)  
 [Sanny Builder](https://sannybuilder.com/index.html) | [GTA3script Toolchain](https://gtaforums.com/topic/876530-gta3script-toolchain)
 ___
 # 什么是CDK?
@@ -27,20 +27,23 @@ ___
 |:--------:|
 |晓梦大师/XMDS|
 |[小靠/Oakxs](https://github.com/Oakxs)|
-___
+
+___    
 # 特别鸣谢人员:
 |以下排名不分先后|
 |:--------:|
 |[小k/NyaPlus](https://github.com/NyaPlus)|
 |[wanyikai0791/rote66](https://github.com/rote66)|
+
 ___
 ![多喝热水](https://github.com/XMDS/GTA.III.VC.SA.CDK/raw/master/image/多喝热水.png)
+
 # CDK :cow::beer:
 |作者/Author|@[晓梦大师/XMDS](https://github.com/XMDS)|
 |:--------:|:--------:|
 |邮箱/Emil|2841824304@qq.com|
-|百度贴吧用户名/昵称|梦月天地/蕾西亚|
+|百度贴吧用户名/昵称|XMDS/梦月天地/蕾西亚|
 |CDK官群|665043464|
 |侠盗七星制作群|498075642|
-|GTA安卓CLEO群|496511676|
+|GTA安卓CLEO群|649867512|
 |特别鸣谢|[GTA安卓吧](https://tieba.baidu.com/f?kw=gta%B0%B2%D7%BF&fr=ala0&loc=rec&referer=m.baidu.com&pn=0&)|
