@@ -1,0 +1,4 @@
+end
+if
+    0AB1: call_scm_func @switch_true_func 0
+then

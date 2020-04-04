@@ -1,0 +1,1 @@
+Добавьте опкоды из файлов opcodes_NEW.txt и SASCM_NEW.ini в opcodes.txt and SASCM.ini из папки SB\sa.

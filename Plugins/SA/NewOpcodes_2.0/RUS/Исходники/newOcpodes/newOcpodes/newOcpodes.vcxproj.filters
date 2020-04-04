@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Опкоды">
+      <UniqueIdentifier>{470bfdcd-61ba-4b26-96a8-c3980662b14a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Опкоды">
+      <UniqueIdentifier>{5663678c-370a-49ad-b816-65bdd3e838b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OpcodeIds.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="CLEO.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="NewOpcodes.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="OpcodeParams.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Bone.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="General.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Quat.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Colpoint.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeDrawer.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Txd.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="SpotLightDrawer.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="CLEOAudio.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="TextDrawer.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Заголовочные файлы\Опкоды</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteDrawer.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="TxdManager.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="NewOpcodes.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="OpcodeParams.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Bone.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="General.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Quat.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Colpoint.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeDrawer.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Txd.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotLightDrawer.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="CLEOAudio.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="TextDrawer.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Файлы исходного кода\Опкоды</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteDrawer.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="TxdManager.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="CLEO.lib">
+      <Filter>Файлы ресурсов</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

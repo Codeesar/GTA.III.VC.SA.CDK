@@ -1,0 +1,3 @@
+    end
+until true
+0AB1: call_scm_func @switch_level_decrease 0

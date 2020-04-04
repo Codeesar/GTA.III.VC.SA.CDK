@@ -1,0 +1,50 @@
+goto @switch_funcs_end
+:switch_compare_func
+0AC6: 1@ = label @switch_data offset
+0A8D: 2@ = read_memory 1@ size 4 virtual_protect 0
+2@ *= 4
+2@ += 4
+005A: 1@ += 2@
+0A8D: 1@ = read_memory 1@ size 4 virtual_protect 0
+if
+    003B: 0@ == 1@
+then
+    :switch_true_func
+    0485: return_true
+    0AB2: ret 0
+end
+059A: return_false
+0AB2: ret 0
+:switch_level_increase
+0AC6: 1@ = label @switch_data offset
+0A8D: 2@ = read_memory 1@ size 4 virtual_protect 0
+2@ += 1
+if
+    2@ > 7
+then
+    2@ = 0
+end
+0A8C: write_memory 1@ size 4 value 2@ virtual_protect 0
+2@ *= 4
+2@ += 4
+005A: 1@ += 2@
+0A8C: write_memory 1@ size 4 value 0@ virtual_protect 0
+0AB2: ret 0
+:switch_level_decrease
+0AC6: 1@ = label @switch_data offset
+0A8D: 0@ = read_memory 1@ size 4 virtual_protect 0
+0@ -= 1
+if
+    0@ < 0
+then
+    0@ = 7
+end
+0A8C: write_memory 1@ size 4 value 0@ virtual_protect 0
+0AB2: ret 0
+
+:switch_data
+hex
+    00000000
+    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+end
+:switch_funcs_end
