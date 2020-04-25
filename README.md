@@ -7,19 +7,13 @@ ___
 CDK(即CLEO Development Kit)是一个辅助GTA游戏III.VC.SA的CLEO开发工具包。  
 CDK的作用是辅助CLEO的作者制作、编写、修改所集成的一套综合的教程资料包。
 ## 工具
-CDK将提供CLEO制作工具Sanny Builder(以下简称SB工具)和GTA3script Toolchain(以下简称SC工具)，同时介绍SB工具和SC工具的使用操作方法，并附带最新版的PC和Android的III.VC.SA三部曲的CLEO主程序。
+CDK将提供CLEO制作工具Sanny Builder(以下简称SB工具)和使用Visual Studio Code的GTA3script Toolchain(以下简称SC工具)编写CLEO，同时介绍工具的使用操作方法，并附带最新版的PC和Android的III.VC.SA三部曲的CLEO主程序。
 ## 内容
     注: CDK同时支持PC和Android的CLEO开发。
+* CLEO是什么？它的发展和由来。    
 * SB工具和SC工具的详细使用教程。
-* CLEO制作、编写、修改、移植的基础教程。
-* CLEO进阶高级教程。
-* CLEO语法使用的教程。
 * 所有Opcodes(操作码，以下简称OP)的更新和整理。
 * 所有OP详细的分类、注释、参数、源码以及用法。
-* CLEO相关的辅助资料。
-* 内存地址、内存函数的整理。
-* 游戏部分文件的详解。
-* 本人以及其他作者的原创CLEO源码托管。
 * ………(待更新ing):smile:
 ___
 # 参与开发CDK人员名单(感谢):
