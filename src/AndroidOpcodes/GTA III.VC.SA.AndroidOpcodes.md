@@ -15,14 +15,15 @@ CommandName:
     GET_GAME_VERSION
 
 描述: 获取游戏的版本号.   
-Description: Get the version ID of the game.
+Description: Get the version ID of the game.  
 
-* SupportedGame(支持的游戏): `Android GTAIII.GTAVC.GTASA`  
-* Library（所属库）: `libCLEO.SO`  
-* Author（作者）: `AlexanderBlade`  
-* ParametersNum（参数数量）: `1`  
+* SupportedGame(支持的游戏): `Android GTAIII.GTAVC.GTASA`
+* Library（所属库）: `libCLEO.SO`
+* Author（作者）: `AlexanderBlade`
+* ParametersNum（参数数量）: `1`
 * ParametersType（参数类型）: `Returned Integer(INT)`
 * Example（示例代码）:
+
 ```
 0DD6: 0@ = get_game_version
 if  
@@ -30,15 +31,18 @@ if
 then
 ```
 * 额外说明: `上面的代码为判断游戏的版本ID是否为13，也就是判游戏版本是否为GTASA1.08版本.   
-0DD8在安卓CLEO用来获取安卓GTA游戏的版本号，该OP的参数为获取到的版本ID，不同版本ID对应不同的GTA游戏版本，你可以查看下面的安卓GTA游戏版本ID表格，来帮助你编写CLEO脚本进行版本判断.`
+0DD8在安卓CLEO用来获取安卓GTA游戏的版本号，该OP的参数为获取到的版本ID，不同版本ID对应不同的GTA游戏版本，你可以查看下面的安卓GTA游戏版本ID表格，来帮助你编写CLEO脚本进行版本判断.`  
 
 * Data:  
-        注: GTAVC1.06和1.07版没有本质上的区别，只是谷歌地区不同
-        上架了两个版本，实际上为一个版本，GTAVC1.06和1.07版的ID都是12。
-        GTA3v1.8.GTAVCv1.07/1.09.GTASAv2.00这四个版本是FLA插件为安卓CLEO主程序添加的ID。
+
+
+    注: GTAVC1.06和1.07版没有本质上的区别.只是谷歌地区不同
+    上架了两个版本.实际上为一个版本.GTAVC1.06和1.07版的ID都是12。
+    GTA3v1.8.GTAVCv1.07/1.09.GTASAv2.00这四个版本是FLA插件为
+    安卓CLEO主程序添加的ID.  
 
 |GAME|ID|GAME|ID|
-|:--------:|:--------:|:--------:|:--------:| 
+|:--------:|:--------:|:--------:|:--------:|
 |Undefined|0|GTA3 v1.4|1|  
 |GTAVC v1.03|2|GTASA v1.00|3|
 |GTASA v1.02|5|GTASA v1.03|6|
