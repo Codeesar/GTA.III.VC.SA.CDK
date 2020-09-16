@@ -1,0 +1,518 @@
+
+PT: Abra o "gtasa/cleo.xml" localizado na pasta do compilador GTA3script.
+EN: Open the "gtasa/cleo.xml" located in the GTA3script compiler folder.
+
+
+PT: Dentro de <Constants> (normalmente no fim) adicione:
+EN: Within <Constants> (usually at the end) add:
+
+
+    <!-- CLEO+ -->
+
+    <Enum Name="VEHICLE_SUBCLASS" Global="true">
+      <Constant Name="VEHICLE_SUBCLASS_AUTOMOBILE"/>
+      <Constant Name="VEHICLE_SUBCLASS_MTRUCK"/>
+      <Constant Name="VEHICLE_SUBCLASS_QUAD"/>
+      <Constant Name="VEHICLE_SUBCLASS_HELI"/>
+      <Constant Name="VEHICLE_SUBCLASS_PLANE"/>
+      <Constant Name="VEHICLE_SUBCLASS_BOAT"/>
+      <Constant Name="VEHICLE_SUBCLASS_TRAIN"/>
+      <Constant Name="VEHICLE_SUBCLASS_FHELI"/>
+      <Constant Name="VEHICLE_SUBCLASS_FPLANE"/>
+      <Constant Name="VEHICLE_SUBCLASS_BIKE"/>
+      <Constant Name="VEHICLE_SUBCLASS_BMX"/>
+      <Constant Name="VEHICLE_SUBCLASS_TRAILER"/>
+    </Enum>
+    <Enum Name="ENTITY_TYPE" Global="true">
+      <Constant Name="ENTITY_TYPE_OTHER"/>
+      <Constant Name="ENTITY_TYPE_BUILDING"/>
+      <Constant Name="ENTITY_TYPE_OBJECT"/>
+      <Constant Name="ENTITY_TYPE_PED"/>
+      <Constant Name="ENTITY_TYPE_VEHICLE"/>
+    </Enum>
+    <Enum Name="EASE_MODE">
+      <Constant Name="EASE_MODE_QUADRATIC"/>
+      <Constant Name="EASE_MODE_CUBIC"/>
+      <Constant Name="EASE_MODE_QUARTIC"/>
+      <Constant Name="EASE_MODE_QUINTIC"/>
+      <Constant Name="EASE_MODE_SINUSOIDAL"/>
+      <Constant Name="EASE_MODE_EXPONENTIAL"/>
+      <Constant Name="EASE_MODE_CIRCULAR"/>
+      <Constant Name="EASE_MODE_ELASTIC"/>
+      <Constant Name="EASE_MODE_BACK"/>
+      <Constant Name="EASE_MODE_BOUNCE"/>
+    </Enum>
+    <Enum Name="EASE_WAY">
+      <Constant Name="EASE_WAY_IN"/>
+      <Constant Name="EASE_WAY_OUT"/>
+      <Constant Name="EASE_WAY_INOUT"/>
+    </Enum>
+    <Enum Name="WEAPONFIRE">
+      <Constant Name="WEAPONFIRE_MELEE"/>
+      <Constant Name="WEAPONFIRE_INSTANT_HIT"/>
+      <Constant Name="WEAPONFIRE_PROJECTILE"/>
+      <Constant Name="WEAPONFIRE_AREA_EFFECT"/>
+      <Constant Name="WEAPONFIRE_CAMERA"/>
+      <Constant Name="WEAPONFIRE_USE"/>
+    </Enum>
+
+
+
+
+
+PT: Dentro de <Commands> (normalmente no fim) adicione:
+EN: Within <Commands> (usually at the end) add:
+
+
+    <!-- CLEO+ -->
+ 
+    <Command ID="0xEA0" Name="SET_CHAR_SECOND_PLAYER">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>
+        <Arg Type="INT" Desc="Enable camera"/>
+        <Arg Type="INT" Desc="Separate cars"/>
+      </Args>
+    </Command>
+	
+    <Command ID="0xEA1" Name="DISABLE_SECOND_PLAYER">
+      <Args>
+        <Arg Type="INT" Desc="Restore camera"/>
+      </Args>
+    </Command>
+	
+    <Command ID="0xEA2" Name="FIX_TWO_PLAYERS_SEPARATED_CARS">
+      <Args>
+        <Arg Type="INT" Desc="Bool"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE01" Name="CREATE_OBJECT_NO_SAVE">
+      <Args>
+        <Arg Type="INT" Enum="MODEL"/>
+        <Arg Type="FLOAT" Desc="X Coord"/>
+        <Arg Type="FLOAT" Desc="Y Coord"/>
+        <Arg Type="FLOAT" Desc="Z Coord"/>
+        <Arg Type="INT" Desc="Bool"/>
+        <Arg Type="INT" Desc="Bool"/>
+        <Arg Type="INT" Out="true" Entity="OBJECT"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE02" Name="SET_CAR_GENERATOR_NO_SAVE">
+      <Args>
+        <Arg Type="INT" Entity="CAR_GENERATOR"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xD59" Name="GET_CURRENT_WEATHER">
+      <Args>
+        <Arg Type="INT" Desc="Weather ID" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE04" Name="GET_NEXT_WEATHER">
+      <Args>
+        <Arg Type="INT" Desc="Weather ID" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE05" Name="SET_NEXT_WEATHER">
+      <Args>
+        <Arg Type="INT" Enum="WEATHER" Desc="Weather ID"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE06" Name="GET_RAIN_INTENSITY">
+      <Args>
+        <Arg Type="FLOAT" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE07" Name="SET_RAIN_INTENSITY">
+      <Args>
+        <Arg Type="FLOAT"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE08" Name="IS_CAR_SCRIPT_CONTROLLED">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>   
+      </Args>
+    </Command>
+    
+    <Command ID="0xE09" Name="MARK_CAR_AS_NEEDED">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>   
+      </Args>
+    </Command>
+
+    <Command ID="0xE0A" Name="IS_CHAR_SCRIPT_CONTROLLED">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>   
+      </Args>
+    </Command>
+    
+    <Command ID="0xE0B" Name="MARK_CHAR_AS_NEEDED">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>   
+      </Args>
+    </Command>
+    
+    <Command ID="0xE0C" Name="IS_OBJECT_SCRIPT_CONTROLLED">
+      <Args>
+        <Arg Type="INT" Entity="OBJECT"/>   
+      </Args>
+    </Command>
+    
+    <Command ID="0xE0D" Name="MARK_OBJECT_AS_NEEDED">
+      <Args>
+        <Arg Type="INT" Entity="OBJECT"/>   
+      </Args>
+    </Command>
+
+    <Command ID="0xE0E" Name="GET_CURRENT_RESOLUTION">
+      <Args>
+        <Arg Type="INT" Desc="Width" Out="true"/>
+        <Arg Type="INT" Desc="Height" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE0F" Name="GET_FIXED_XY_ASPECT_RATIO">
+      <Args>
+        <Arg Type="FLOAT" Desc="Width"/>
+        <Arg Type="FLOAT" Desc="Height"/>
+        <Arg Type="FLOAT" Desc="Width" Out="true"/>
+        <Arg Type="FLOAT" Desc="Height" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE10" Name="IS_MOUSE_WHEEL_UP">
+    </Command>
+
+    <Command ID="0xE11" Name="IS_MOUSE_WHEEL_DOWN">
+    </Command>
+    
+    <Command ID="0xE12" Name="GET_VEHICLE_SUBCLASS">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>   
+        <Arg Type="INT" Enum="VEHICLE_SUBCLASS" Out="true"/>   
+      </Args>
+    </Command>
+
+    <Command ID="0xE13" Name="GET_ENTITY_TYPE">
+      <Args>
+        <Arg Type="INT"/>   
+        <Arg Type="INT" Enum="ENTITY_TYPE" Out="true"/>   
+      </Args>
+    </Command>
+
+    <Command ID="0xE14" Name="INIT_EXTENDED_CHAR_VARS">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>  
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Total vars"/>
+      </Args>
+    </Command>
+	
+    <Command ID="0xE15" Name="SET_EXTENDED_CHAR_VAR">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>  
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value"/>
+      </Args>
+    </Command>
+	 
+    <Command ID="0xE16" Name="GET_EXTENDED_CHAR_VAR">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>  
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE17" Name="INIT_EXTENDED_CAR_VARS">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Total vars"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE18" Name="SET_EXTENDED_CAR_VAR">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE19" Name="GET_EXTENDED_CAR_VAR">
+      <Args>
+        <Arg Type="INT" Entity="CAR"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE1A" Name="INIT_EXTENDED_OBJECT_VARS">
+      <Args>
+        <Arg Type="INT" Entity="OBJECT"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Total vars"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE1B" Name="SET_EXTENDED_OBJECT_VAR">
+      <Args>
+        <Arg Type="INT" Entity="OBJECT"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE1C" Name="GET_EXTENDED_OBJECT_VAR">
+      <Args>
+        <Arg Type="INT" Entity="OBJECT"/>
+        <Arg Type="STRING" AllowPointer="true" PreserveCase="true" Desc="ID"/>
+        <Arg Type="INT" Desc="Var number"/>
+        <Arg Type="INT" Desc="Value" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE1D" Name="IS_ON_MISSION">
+    </Command>
+    
+    <Command ID="0xE20" Name="IS_ON_SAMP">
+    </Command>
+    
+    <Command ID="0xE25" Name="IS_ON_CUTSCENE">
+    </Command>
+
+    <Command ID="0xD1E" Name="QUAT_SLERP">
+      <Args>
+        <Arg Type="INT" Desc="Quat From"/>
+        <Arg Type="INT" Desc="Quat To"/>
+        <Arg Type="FLOAT" Desc="t"/>
+        <Arg Type="INT" Desc="Quat Result"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE1F" Name="EASE">
+      <Args>
+        <Arg Type="FLOAT" Desc="k"/>
+        <Arg Type="INT" Enum="EASE_MODE" Desc="Mode"/>
+        <Arg Type="INT" Enum="EASE_WAY" Desc="Way"/>
+        <Arg Type="FLOAT" Desc="Result"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE21" Name="GET_AUDIO_SFX_VOLUME">
+      <Args>
+        <Arg Type="FLOAT" Desc="0.0 - 1.0" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE22" Name="GET_AUDIO_RADIO_VOLUME">
+      <Args>
+        <Arg Type="FLOAT" Desc="0.0 - 1.0" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE23" Name="GET_MOUSE_SENSIBILITY">
+      <Args>
+        <Arg Type="FLOAT" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE24" Name="FIX_CHAR_GROUND_BRIGHTNESS_AND_FADE_IN">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>
+        <Arg Type="INT" Desc="Fix Z ground"/>
+        <Arg Type="INT" Desc="Fix brightness"/>
+        <Arg Type="INT" Desc="Start fade in"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xD4E" Name="READ_STRUCT_OFFSET">
+      <Args>
+        <Arg Type="INT" Desc="Pointer"/>
+        <Arg Type="INT" Desc="Offset"/>
+        <Arg Type="INT" Desc="Size"/>
+        <Arg Type="PARAM" Desc="Result" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE28" Name="WRITE_STRUCT_OFFSET">
+      <Args>
+        <Arg Type="INT" Desc="Pointer"/>
+        <Arg Type="INT" Desc="Offset"/>
+        <Arg Type="INT" Desc="Size"/>
+        <Arg Type="PARAM" Desc="Value"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE26" Name="IS_WEAPON_FIRE_TYPE">
+      <Args>
+        <Arg Type="INT" Enum="WEAPONTYPE" Desc="Weapon Type"/>
+        <Arg Type="INT" Enum="WEAPONFIRE" Desc="Weapon Fire Type"/>
+      </Args>
+    </Command>
+	
+    <Command ID="0xE27" Name="GET_ANGLE_FROM_TWO_COORDS">
+      <Args>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Angle" Out="true"/>
+      </Args>
+    </Command>
+	
+
+    <Command ID="0xE27" Name="GET_ANGLE_FROM_TWO_COORDS">
+      <Args>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Angle" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE2A" Name="ADD_CLEO_BLIP">
+      <Args>
+        <Arg Type="INT" Enum="RADAR_SPRITE"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="INT" Desc="Short"/>
+        <Arg Type="INT" Desc="Red"/>
+        <Arg Type="INT" Desc="Green"/>
+        <Arg Type="INT" Desc="Blue"/>
+        <Arg Type="INT" Desc="Alpha"/>
+        <Arg Type="INT" Out="true" Entity="CLEOBLIP"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE2B" Name="REMOVE_CLEO_BLIP">
+      <Args>
+        <Arg Type="INT" Entity="CLEOBLIP"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE2C" Name="GET_CURRENT_SAVE_SLOT">
+      <Args>
+        <Arg Type="INT" Out="true"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE2D" Name="IS_GAME_FIRST_START">
+    </Command>
+
+    <Command ID="0xE2E" Name="CREATE_RENDER_OBJECT_TO_CHAR_BONE">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>
+        <Arg Type="INT" Enum="DEFAULTMODEL"/>
+        <Arg Type="INT" Enum="BONE"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+        <Arg Type="FLOAT" Desc="RX"/>
+        <Arg Type="FLOAT" Desc="RY"/>
+        <Arg Type="FLOAT" Desc="RZ"/>
+        <Arg Type="INT" Out="true" Entity="RENDEROBJECT"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE2F" Name="DELETE_RENDER_OBJECT">
+      <Args>
+        <Arg Type="INT" Entity="RENDEROBJECT"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE30" Name="SET_RENDER_OBJECT_AUTO_HIDE">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>
+        <Arg Type="INT" Desc="Dead"/>
+        <Arg Type="INT" Desc="Weapon"/>
+        <Arg Type="INT" Desc="Car"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE31" Name="SET_RENDER_OBJECT_VISIBLE">
+      <Args>
+        <Arg Type="INT" Entity="RENDEROBJECT"/>
+        <Arg Type="INT" Desc="Bool"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE35" Name="SET_RENDER_OBJECT_POSITION">
+      <Args>
+        <Arg Type="INT" Entity="RENDEROBJECT"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE36" Name="SET_RENDER_OBJECT_ROTATION">
+      <Args>
+        <Arg Type="INT" Entity="RENDEROBJECT"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+      </Args>
+    </Command>
+ 
+    <Command ID="0xE37" Name="SET_RENDER_OBJECT_SCALE">
+      <Args>
+        <Arg Type="INT" Entity="RENDEROBJECT"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE32" Name="SET_CHAR_COORDINATES_SIMPLE">
+      <Args>
+        <Arg Type="INT" Entity="CHAR"/>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+      </Args>
+    </Command>
+    
+    <Command ID="0xE33" Name="GET_PICKUP_THIS_COORD">
+      <Args>
+        <Arg Type="FLOAT" Desc="X"/>
+        <Arg Type="FLOAT" Desc="Y"/>
+        <Arg Type="FLOAT" Desc="Z"/>
+        <Arg Type="INT" Desc="NotCollected"/>
+        <Arg Type="INT" Out="true" Entity="PICKUP"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE34" Name="GET_PICKUP_MODEL">
+      <Args>
+        <Arg Type="INT" Entity="PICKUP"/>
+        <Arg Type="INT" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE38" Name="GET_PICKUP_POINTER">
+      <Args>
+        <Arg Type="INT" Entity="PICKUP"/>
+        <Arg Type="INT" Out="true"/>
+      </Args>
+    </Command>
+
+    <Command ID="0xE39" Name="GET_PICKUP_TYPE">
+      <Args>
+        <Arg Type="INT" Entity="PICKUP"/>
+        <Arg Type="INT" Out="true"/>
+      </Args>
+    </Command>

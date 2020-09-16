@@ -1,4 +1,0 @@
-[$CONSTANTS]
-ERR_0086=Only local variables can be used as array indexes in LCS and VCS modes
-ERR_0087=The aDMA variable can only be a multiple of 4  in LCS and VCS modes
-ERR_0088=Global variable %d is out of range.
